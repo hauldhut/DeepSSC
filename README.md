@@ -1,19 +1,20 @@
-# DeepSSC
-# A biphasic Deep Semi-supervised framework for Subtype Classification and biomarker discovery
+# DeepSSC: A Semi-Supervised Deep Learning Framework for Multi-Omics Cancer Subtype Classification and Biomarker Discovery
 
 ---
-This repository contains source code and original/preprocessed datasets for the paper "A biphasic Deep Semi-supervised framework for Suptype Classification and biomarker discovery". 
+This repository contains source code and original/preprocessed datasets for the paper "DeepSSC: A Semi-Supervised Deep Learning Framework for Multi-Omics Cancer Subtype Classification and Biomarker Discovery". 
 #### 1. Introduction
 ---
-To take full advantage of the unprecedented development of -omics technologies and generate further biological insights into human disease, it is a pressing need to develop novel computational methods for integrative analysis of multi-omics data. Here, we proposed a biphasic Deep Semi-supervised multi-omics integration framework for Subtype Classification and biomarker discovery, DeepSSC. In phase 1, each denoising autoencoder was used to extract a compact representation for each -omics data, and then they were concatenated and put into a feed-forward neural network for subtype classification. In phase 2, our Biomarker Gene Identification (BGI) procedure leveraged that neural network classifier to render subtype-specific important biomarkers. We also validated our given results on independent dataset. We demonstrated that DeepSSC exhibited better performance over other state-of-the-art techniques concerning classification tasks. As a result, DeepSSC successfully detected well-known biomarkers and hinted at novel candidates from different -omics data types related to the investigated biomedical problems. 
+Advances in high-throughput -omics technologies have enabled comprehensive molecular characterization of cancer, creating new opportunities for subtype classification and biomarker discovery. However, multi-omics integration remains challenging due to heterogeneous data modalities and the limited availability of labeled samples for training deep learning models.
+
+To address these challenges, we propose DeepSSC, a biphasic semi-supervised deep learning framework for multi-omics cancer subtype classification and biomarker identification. By learning modality-specific representations and integrating them through a post-concatenation strategy, DeepSSC leverages both labeled and unlabeled samples to improve predictive performance. Extensive evaluations across multiple cancer types demonstrate that DeepSSC achieves robust classification accuracy while identifying biologically meaningful subtype-specific biomarkers, highlighting the value of semi-supervised learning for precision oncology.
 
 #### 2. Analysis Pipeline
 ---
-![Figure1](https://i.imgur.com/mfOUzV9.png)
+![Figure1](https://github.com/hauldhut/DeepSSC/blob/main/Figure1.png)
 ** Figure 1 | Framework of DeepSSC. ** In phase 1, the two preprocessed profiles (GE and CNA) from TCGA were fed into their own denoising autoencoders to generate two independent representations, zGE and zCNA . Then, zGE and zCNA  were concatenated into a single input layer attached with two FC layers to create a neural network classifier. Finally, this neural network classifier became the input of our BGI procedure in phase 2 to detect candidate biomarkers. To demonstrate the efficacy of DeepSSC, those biomarkers should help classify cancer patients into different subtypes well by only using simple machine learning models. Besides, those biomarkers also were further investigated in terms of their biological functions. Note that labeled and unlabeled data were defined clearly at the ‘Materials and Methods’ section in the work. Abbreviation: GE, mRNA expression; CNA, copy-number alterations; FC, fully-connected layer.
 
 #### 3. Contact
 ---
-Feel free to contact [Quang-Huy Nguyen](https://github.com/huynguyen250896) (huynguyen96.dnu@gmail.com) or [Duc-Hau Le](https://github.com/hauldhut) (hauldhut@gmail.com) for any questions about the paper, datasets, code and results.
+Feel free to contact [Quang-Huy Nguyen](https://github.com/huynguyen250896) (huynguyen96.dnu@gmail.com) or [Duc-Hau Le](https://github.com/hauldhut) (hauld@soict.hust.edu.vn) for any questions about the paper, datasets, code and results.
 
 
