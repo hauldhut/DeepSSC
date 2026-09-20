@@ -2,11 +2,13 @@
 
 ---
 This repository contains source code and original/preprocessed datasets for the paper "DeepSSC: A Semi-Supervised Deep Learning Framework for Multi-Omics Cancer Subtype Classification and Biomarker Discovery". 
-#### 1. Introduction
+#### 1. Highlights
 ---
-Advances in high-throughput -omics technologies have enabled comprehensive molecular characterization of cancer, creating new opportunities for subtype classification and biomarker discovery. However, multi-omics integration remains challenging due to heterogeneous data modalities and the limited availability of labeled samples for training deep learning models.
-
-To address these challenges, we propose DeepSSC, a biphasic semi-supervised deep learning framework for multi-omics cancer subtype classification and biomarker identification. By learning modality-specific representations and integrating them through a post-concatenation strategy, DeepSSC leverages both labeled and unlabeled samples to improve predictive performance. Extensive evaluations across multiple cancer types demonstrate that DeepSSC achieves robust classification accuracy while identifying biologically meaningful subtype-specific biomarkers, highlighting the value of semi-supervised learning for precision oncology.
+-	DeepSSC integrates semi-supervised learning for multi-omics cancer subtype classification. 
+-	Modality-specific denoising autoencoders learn representations from labeled and unlabeled samples. 
+-	Post-concatenation fusion enables effective integration of complementary omics representations. 
+-	Integrated Gradients-based biomarker identification reveals subtype-specific molecular features. 
+-	Identified biomarkers retain predictive utility and show biological relevance across cancer cohorts.
 
 #### 2. Analysis Pipeline
 ---
